@@ -1,0 +1,48 @@
+{
+  "name": "bladevpn",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-dev": "gulp build-dev",
+    "build": "gulp build",
+    "nodemon-dev": "cross-env NODE_ENV=development nodemon --ignore ./client --watch ./server ./server/app.js",
+    "pm2": "cross-env NODE_ENV=production pm2 start processes.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "cross-env": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-version-number": "^0.1.7"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "jwt-simple": "^0.5.1",
+    "koa": "^2.2.0",
+    "koa-artTemplate": "^2.0.6",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^2.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.0.0",
+    "koa-router": "^7.2.0",
+    "koa-send": "^4.1.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "nodemon": "^1.11.0",
+    "paymentwall": "^1.2.4",
+    "sequelize": "^3.30.4",
+    "underscore": "^1.8.3"
+  }
+}

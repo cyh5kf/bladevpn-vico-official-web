@@ -1,0 +1,317 @@
+@import "./common.less";
+@import "./_variables.less";
+
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+  cursor: pointer;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border linear 0.2s,box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s,box-shadow linear 0.2s;
+  transition: border linear 0.2s,box-shadow linear 0.2s;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+body, td, input, textarea, select {
+  font-family: "proxima-nova", "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  background-color: #F8F8F8;
+}
+
+.login {
+  .session-form {
+    font-size: 15px;
+    font-weight: 200;
+    max-width: 497px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: auto;
+    background-color: #fff;
+
+    input[type="password"]:focus, input[type="email"]:focus {
+      border-color: rgba(82,168,236,0.8);
+      outline: 0;
+      outline: thin dotted \9;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+      -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
+    }
+
+    .new_user, .sent-email-ok {
+      margin: 0 0 20px;
+
+      .page-title {
+        color: #43474C;
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 50px;
+        font-weight: 200;
+        text-align: left;
+        padding-top: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          font-size: 15px;
+          display: block;
+          margin-bottom: 3px;
+          font-weight: normal;
+          line-height: 20px;
+        }
+        
+        .valid-email, .valid-password {
+          display: none;
+          color: @color-red-error;
+        }
+      }
+
+      .error {
+        input[type="password"]:focus, input[type="email"]:focus {
+          border-color: rgba(233,50,45,0.8);
+          outline: 0;
+          outline: thin dotted \9;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(233,50,45,0.6);
+          -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(233,50,45,0.6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(233,50,45,0.6);
+        }
+        .valid-email, .valid-password {
+          display: block;
+        }
+      }
+
+      .text {
+        font-size: 15px;
+        display: block;
+        line-height: 20px;
+      }
+
+      .text-top {
+        margin-bottom: 42px;
+      }
+
+      .email {
+        color: @color-blue-theme;
+      }
+    }
+
+    .form-field {
+      -webkit-appearance: none;
+      background-color: #fff;
+      border: 1px solid rgba(151,151,151,.67);
+      border-radius: 4px;
+      box-shadow: none;
+      width: 100%;
+      min-height: 48px;
+      line-height: 1;
+      padding-left: 18px;
+      padding-right: 18px;
+      margin-bottom: 8px;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 28px;
+      -webkit-appearance: none;
+      background-color: @color-blue-theme;
+      border: 0;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 18px 20px 17px;
+      display: block;
+      line-height: 1;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease;
+      &:hover {
+        background-color: @color-blue-hover;
+      }
+    }
+  }
+
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+  }
+
+  .form-helper {
+    margin-top: 10px;
+    overflow: hidden;
+
+    .link {
+      vertical-align: middle;
+      float: left;
+
+      a {
+        color: @color-blue-theme;
+        text-decoration: underline;
+      }
+    }
+    .forgot {
+      vertical-align: middle;
+      float: right;
+
+      a {
+        color: #9B9B9B;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .sign-in-click {
+    text-align: left;
+    a {
+      margin: 0 !important;
+    }
+  }
+
+  .need-help {
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    color: #9B9B9B;
+
+    a {
+      color: #9B9B9B;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.reset-password {
+  label {
+    margin-bottom: 15px !important;
+  }
+  .form-submit {
+    margin-top: 90px !important;
+  }
+
+  .error {
+    input[type="password"]:focus, input[type="email"]:focus {
+      border-color: rgba(233,50,45,0.8);
+      outline: 0;
+      outline: thin dotted \9;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(233,50,45,0.6);
+      -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(233,50,45,0.6);
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(233,50,45,0.6);
+    }
+    .valid-email, .valid-password {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reset-password.dialog {
+    width: 70%;
+    margin-left: -35%;
+    
+    .session-form {
+      min-height: 100%;
+      max-width: 100%;
+      padding: 40px 35px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 5px 50px 0 rgba(0,0,0,0.08);
+
+      .tip-content {
+        margin-top: 20px;
+
+        .tip {
+          font-size: 20px;
+          margin-bottom: 40px;
+
+          img.icon-status {
+            width: 27px;
+            height: 27px;
+            margin-right: 10px;
+          }
+        }
+        
+        .desc {
+          font-size: 16px;
+        }
+
+        .form-submit {
+          margin-top: 50px !important;
+        }
+      }
+    }
+
+
+  }
+
+  .login {
+    .session-form {
+      padding: 40px 35px 20px;
+      background-color: #F8F8F8;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .login {
+    .session-form {
+      border-radius: 8px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 5px 50px 0 rgba(0,0,0,0.08);
+      margin: 40px auto;
+      padding: 30px 47px 20px;
+
+      .page-title {
+        font-size: 38px !important;
+        margin-bottom: 30px !important;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 1301px) {
+  .login {
+    .session-form {
+      min-height: 557px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 5px 50px 0 rgba(0,0,0,0.08);
+      margin: 68px auto;
+      padding: 52px 47px 20px;
+
+      .page-title {
+        font-size: 40px;
+      }
+    }
+  }
+
+  input, textarea, .uneditable-input {
+    margin-left: 0;
+  }
+}
+
