@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TERMS</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: San Francisco, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .pc_style.main {
+            width: 720px;
+            margin: 75px auto 0;
+        }
+
+        .title {
+            color: #333;
+            width: 100%;
+            text-align: center;
+            letter-spacing: -0.36px;
+            font-weight: 400;
+        }
+
+        .pc_style .title {
+            font-size: 24px;
+        }
+
+        .phone_style .title {
+            font-size: 0.9rem;
+            margin-top: 1.4rem;
+        }
+
+        .effective {
+            width: 100%;
+            text-align: center;
+            letter-spacing: -0.24px;
+            font-weight: 300;
+        }
+
+        .pc_style .effective {
+            color: #666;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .phone_style .effective {
+            color: #9B9B9B;
+            font-size: 0.6rem;
+            margin-top: 0.25rem;
+        }
+
+        .common_word {
+            letter-spacing: -0.15px;
+            font-weight: 300;
+        }
+
+        .pc_style .common_word {
+            color: #666;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .phone_style .common_word {
+            color: #333;
+            font-size: 0.7rem;
+            padding: 0 0.75rem 0;
+        }
+
+        .head_common {
+            color: #000;
+            font-weight: 400;
+            letter-spacing: -0.39px;
+        }
+
+        .pc_style .head_common {
+            font-size: 20px;
+        }
+
+        .phone_style .head_common {
+            font-size: 0.8rem;
+            padding: 0 0.75rem 0;
+        }
+
+        .pc_style .head1 {
+            margin-top: 22px;
+        }
+
+        .phone_style .head1 {
+            margin-top: 1.5rem;
+        }
+
+        .pc_style .text_top {
+            margin-top: 22px;
+        }
+
+        .phone_style .text_top {
+            margin-top: 0.5rem;
+        }
+
+        .pc_style .head_top {
+            margin-top: 44px;
+        }
+
+        .phone_style .head_top {
+            margin-top: 1rem;
+        }
+
+        .email {
+            color: #F24D58;
+        }
+
+        .pc_style .bottom_distance {
+            padding-bottom: 30px;
+        }
+
+        .phone_style .bottom_distance {
+            padding-bottom: 1.5rem;
+        }
+
+    </style>
+
+    <script>
+        var tid = "";
+        var fontSize = 20;
+        var pageWidth = 375;
+        var maxPageWidth = 640;
+        var elm = document.documentElement;
+        var clientWidth = elm.clientWidth
+        if (clientWidth >= maxPageWidth) {
+            clientWidth = maxPageWidth;
+        }
+        var fonsSizeSeting = fontSize * (clientWidth / pageWidth) + 'px';
+        elm.style.fontSize = fonsSizeSeting;
+        function refreshRem() {
+            var elmInner = document.documentElement;
+            var widthInner = elmInner.clientWidth;
+            if (widthInner >= maxPageWidth) {
+                widthInner = maxPageWidth;
+            }
+            elmInner.style.fontSize = fontSize * (widthInner / pageWidth) + 'px';
+        }
+        window.addEventListener('resize', function () {
+            clearTimeout(tid);
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+
+    <p class="title">Terms of Service</p>
+    <p class="effective">Effective: April 14th, 2017</p>
+    <p class="head1 head_common">Overview</p>
+    <p class="text_top common_word">
+        <span>The following are the terms of an agreement between you and zuscloud, we will refer to zuscloud as "We", "Our", "Us" or "BladeVPN". By using or visiting our service (collectively, including but not limited to, all services, applications and web pages), you acknowledge that you have read, understand, and agree to be bound by these terms and to comply with all applicable laws and regulations.<span
+                class="black_bold">If you do not agree to these terms, you may not use the service.</span></span>
+        <br><br>
+        <span>We may, with or without notice to you, at any time, revise these Terms of Service and any other information related. we may also make improvements or changes in the products, services, or other content related at any time without notice.</span>
+    </p>
+    <p class="head_top head_common">Basic Terms</p>
+    <p class="text_top common_word">
+        <span>BladeVPN is NOT a service for the commission of criminal acts. It is an anonymity and privacy service. You agree not to violate any laws of any jurisdiction you are originating from, or terminating into.</span>
+        <br><br>
+        <span>You agree to protect your user id/password and our system from unauthorized use. You are responsible for all actions that occur on our servers where the login uses your user id/password.</span>
+        <br><br>
+        <span>You agree not to use the system for sending spam, port scanning, scanning for open proxies or open relays, sending opt-in email, unsolicited email or any type or version of email sent in large quantities, even if the email is ultimately sent off of another server. You agree not to launch any pop-ups from our service. You agree not to attack in any way other computer or network through our service.</span>
+        <br><br>
+        <span>Actual service coverage, speeds, locations and quality may vary. The Service will attempt to be available at all times except for limited periods for maintenance and repair. However, the Service may be subject to unavailability for a variety of factors beyond our control including emergencies, third party service failures, transmission, equipment or network problems or limitations, interference, signal strength, and may be interrupted, refused, limited or curtailed. We are not responsible for data, messages or pages lost, not delivered, delayed or misdirected because of interruptions or performance issues with the Service or communications services or networks (e.g., T-1 lines or the Internet). We may impose usage or Service limits, suspend Service, or block certain kinds of usage in our sole discretion to protect users or the Service. Network speed is an estimate and is no indication of the speed at which you or the Service sends or receives data. Actual network speed will vary based on configuration, compression, network congestion and other factors. The accuracy and timeliness of data received is not guaranteed; delays or omissions may occur.</span>
+        <br><br>
+        <span>We do not log any user activity (sites visited, DNS lookups, emails etc.) We only log access attempts to our servers (for security and troubleshooting). We do not get involved in any form of censorship. We do not give your personal info to any third parties. We do not cooperate with any requests for information unless we are ordered by a court of competent jurisdiction and the vast majority of these requests would not be from a court of competent jurisdiction We will protect you to the max and our system is setup to automatically do so. There are hundreds of good reasons for being anonymous and we respect them fully.</span>
+        <br><br>
+        <span>Hacking, cracking, distribution of viruses, fraudulent activities, network sabotage, phishing, or any conduct deemed illegal or unwanted shall be subject to suspension or termination. Users are responsible for the proper secure configuration of their services and are responsible for any damages caused by their neglect or exposure of vulnerabilities whether intentional or unintentional.</span>
+    </p>
+    <p class="head_top head_common">Third Parties</p>
+    <p class="text_top common_word">
+        <span>By using BladeVPN you acknowledge and consent that BladeVPN may display advertisement within the App, as a separate webpage in your browser, or in any manner that we find suitable. We may use third party advertisement services with their own terms of service. By using BladeVPN you also agree the terms of service of those third party services and acknowledge and adhere that BladeVPN shall not take any responsibility nor liability for the contents shown on their behalf. Using any tools including any software or scripts that may prevent BladeVPN from displaying advertisements may be considered violation of this agreement and we may terminate your account. You may access and use advertised materials solely at your own risk.</span>
+    </p>
+    <p class="head_top head_common">Ending These Terms</p>
+    <p class="text_top common_word">
+        <span>The Terms will continue to apply until terminated by either You or zuscloud as follows. You may end Your legal agreement with zuscloud at any time for any reason by deactivating Your accounts and discontinuing Your use of BladeVPN.</span>
+        <br><br>
+        <span>We may suspend or terminate Your accounts or cease providing You with all or part of zuscloud services at any time for any reason, including, but not limited to, if we reasonably believe: (i) You have violated these Terms, (ii) you create risk or possible legal exposure for us; (iii) our provision of the Services to you is no longer commercially viable. We will make reasonable efforts to notify you by the email address associated with your account or the next time you attempt to access your account, depending on the circumstances. In all such cases, the Terms shall terminate, including, without limitation, your license to use the Services.</span>
+    </p>
+    <p class="head_top head_common">Disclaimer of Warranty</p>
+    <p class="text_top common_word">
+        <span>YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT: YOUR USE OF THE SERVICE IS AT YOUR SOLE RISK. ALL PRODUCTS, SOFTWARE, MATERIALS, PROGRAMS, AND SERVICES ARE PROVIDED "AS IS," WITH NO WARRANTIES OR GUARANTEES WHATSOEVER. </span>
+        <br><br>
+        <span>ZUSCLOUD EXPRESSLY DISCLAIMS (AND YOU HEREBY WAIVE): (A) ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT, RESPECTING THE SERVICE AND RESPECTING ANY AND ALL PRODUCTS AND SERVICES; (B)ALL WARRANTIES THAT SUCH CONTENT IS FREE OF MATERIAL THAT IS DEFAMATORY, INFRINGES COPYRIGHT, AND/OR VIOLATES THE RIGHTS OF PRIVACY OR PUBLICITY OF ANY PERSON OR ENTITY OR VIOLATES ANY LAW OR GOVERNMENTAL REGULATION. (C) ALL WARRANTIES THAT: (i) THE SERVICE WILL MEET YOUR REQUIREMENTS; (ii) THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE; (iii) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SERVICE WILL BE ACCURATE OR RELIABLE; OR (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL OBTAINED BY YOU OR THROUGH THE SERVICE WILL MEET YOUR NEEDS OR EXPECTATIONS. </span>
+        <br><br>
+        <span>YOUR DOWNLOADING OF ANY MATERIAL FROM OR THROUGH THE SERVICE IS AT YOUR OWN DISCRETION AND RISK. WITHOUT LIMITATION, YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM, MOBILE DEVICE, OR OTHER DEVICE, OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF ANY SUCH MATERIAL. YOU UNDERSTAND AND AGREE EXPRESSLY THAT ZUSCLOUD SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF ZUSCLOUD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES).</span>
+        <br><br>
+        <span>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES. ACCORDINGLY, SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. </span>
+    </p>
+    <p class="head_top head_common">Amendments</p>
+    <p class="bottom_distance text_top common_word">
+        <span>BladeVPN Users understand that the present Terms of Service are subject to changes made by zuscloud at any time at its sole discretion, and you agree to be bound by any and all modifications, changes and revisions. You understand that it is your obligation to periodically review this webpage in order to account for any changes made, as they will be binding upon assent.</span>
+        <br>
+        <span>The terms of service herein apply to all users of zuscloud and you are only authorized to use the service if you agree to abide by all applicable federal and state laws and be legally bound by the terms of service of this Agreement.</span>
+        <br><br>
+        <span>If you have any questions about these Terms, please email us at <span
+                class="email">support@bladevpn.com</span></span>
+        <br><br>
+        <span>(Last updated: April 14th, 2017)</span>
+    </p>
+
+</div>
+
+<script type="text/javascript">
+    var ua = navigator.userAgent;
+    if (ua.indexOf("Android") != -1 || ua.match(/iPhone/i) || ua.match(/iPod/i) || ua.match(/iPad/i)) { // || ua.match(/iPad/i)
+        document.querySelector(".main").className += " phone_style";
+    } else {
+        document.querySelector(".main").className += " pc_style";
+    }
+</script>
+</body>
+</html>

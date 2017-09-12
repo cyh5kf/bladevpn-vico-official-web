@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+}
+body {
+    font-family: San Francisco, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #F8F8F8;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a, img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 1px 3px #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+header .content {
+    max-width: 1024px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+header .logo {
+    width: 150px;
+    height: 100%;
+    padding-left: 42px;
+    background: url(../images/logo_blue_30.png) no-repeat;
+    background-position: left center;
+    background-size: 30px 30px;
+    color: #01B5D8;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+header .tab-List>a {
+    color: #333;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+header .active {
+    font-weight: bold;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    max-width: 1027px;
+    margin-top: 70px;
+    color: #36434D;
+    padding: 0 20px 30px;
+}
+.title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+.effective {
+    text-align: center;
+}
+.head1 {
+    margin-top: 28px;
+}
+.email {
+    color: #4285F4;
+}
+.common_word {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+}
+.text_top {
+    margin-top: 22px;
+}
+.head_common {
+    font-size: 16px;
+    font-weight: bold;
+}
+.head_top {
+    margin-top: 44px;
+}
+.bottom_distance {
+    padding-bottom: 30px;
+}
+.black_bold {
+    font-weight: 500;
+}
+.dot {
+    overflow: hidden;
+}
+.dot span {
+    padding-left: 11px;
+    display: block;
+}
+.dot i {
+    width: 5px;
+    height:5px;
+    border-radius: 50%;
+    background-color: #000;
+    display:block;
+    float: left;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+

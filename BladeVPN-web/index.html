@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/logo_blue.ico" rel="icon" type="images/png">
+    <title>BladeVPN</title>
+    <style>
+    	.amp-viewer-wrapper {
+    		display: none!important;
+    	}
+
+		.amp-viewer-is-touch {
+			display: none!important;
+		}
+
+    	html {
+    		height: 100%;
+    	}
+    	body {
+			font-family: San Francisco, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 100%;
+			height: 100%;
+		}
+
+		* {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td {
+			margin: 0;
+			padding: 0;
+		}
+
+		a, img {
+		  	border: 0;
+		}
+
+		a {
+	 	    text-decoration: none;
+		}
+
+		a:hover, a:focus {
+		 	text-decoration: none;
+		}
+
+		img {
+		 	vertical-align: middle;
+		}
+
+		.pc-body {
+			background: url(images/web_bg.png) 0% 0% / cover no-repeat fixed
+		}
+
+		.phone-body {
+			background: linear-gradient(to bottom, #11192E 0%,#045561 100%);
+		}
+
+		.pc-web {
+			display: none;
+			height: 100%;
+			min-height: 800px;
+			position: relative;
+		}
+		
+		header {
+			width: 100%;
+			height: 72px;
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+		}
+		
+		header .content {
+			margin: 0 auto;
+			width: 1024px;
+			height: 30px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		    align-items: center;
+		}
+
+		header .logo {
+			width: 150px;
+			height: 100%;
+			padding-left: 42px;
+			background: url(images/logo_blue_30.png) no-repeat;
+			background-position: left center;
+			background-size: 30px 30px;
+			color: #01B5D8;
+			font-size: 20px;
+		    line-height: 30px;
+		}
+
+		header .tab-List>a {
+			color: #333;
+			font-size: 14px;
+			margin-left: 40px;
+		}
+
+		header .active {
+			font-weight: bold;
+		}
+
+		.main .content {
+			width: 1027px;
+			height: 450px;
+			margin: 0 auto;
+			margin-top: 136px;
+			text-align: left;
+			position: relative;
+		}
+
+		.main .title h2 {
+			color: #fff;
+			font-size: 36px;
+			font-weight: bold;
+		}
+
+		.main .title span {
+			color: #fff;
+			font-size: 20px;
+			margin-top: 16px;
+		    display: block;
+		    -webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.main .btn-download {
+			margin-top: 113px;
+		}
+
+		.main .btn-style {
+			width: 228px;
+			height: 60px;
+			display: block;
+			margin-bottom: 20px;
+		}
+		
+		.main .btn-googlePlay {
+			background: url(images/ic_googleplay.png) no-repeat;
+			background-size: cover;
+		}
+
+		.main .btn-googlePlay:hover {
+			background: url(images/ic_googleplay_hover.png) no-repeat;
+			background-size: cover;
+		}
+
+		.main .btn-appStore {
+			background: url(images/ic_appstore.png) no-repeat;
+			background-size: cover;
+		}
+
+		.main .btn-appStore:hover {
+			background: url(images/ic_appstore_hover.png) no-repeat;
+			background-size: cover;
+		}
+
+		.main .btn-forMac {
+			background: url(images/ic_mac.png) no-repeat;
+			background-size: cover;
+		}
+
+		.main .btn-forMac:hover {
+			background: url(images/ic_mac_hover.png) no-repeat;
+			background-size: cover;
+		}
+
+		.main .ic_pic {
+			width: 557px;
+			height: 362px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background: url("images/ic_pic.png") no-repeat;
+			background-size: cover;
+		}
+
+		.ic_hover {
+			display: none;
+		}
+
+		.copyright {
+	    	position: absolute;
+		    bottom: 40px;
+		    left: 50%;
+		    width: 117px;
+		    margin-left: -59px;
+		    color: #fff;
+		    font-size: 14px;
+		    letter-spacing: 0.17px;
+		    -webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.download-apk {
+			width: 228px;
+			position: relative;
+		}
+
+		.download-apk a {
+			color: #fff;
+			font-size: 24px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			border-bottom: 1px solid #fff;
+			position: relative;
+		}
+
+		.download-apk a:hover {
+			border-bottom: none;
+		}
+
+		.download-apk i {
+			background: url("images/ic_download.png") no-repeat;
+			width:28px;
+			height:28px;
+			background-size: cover;
+			margin-right: 10px;
+		}
+
+		.question {
+			position: absolute;
+			top:0;
+			right: -20px;
+		}
+
+		.question b {
+			background: url("images/ic_question.png") no-repeat;
+			width:20px;
+			height:20px;
+			background-size: cover;
+			display: block;
+			position: absolute;
+			top: 3px;
+			right: -3px;
+		}
+
+		.question b:hover span {
+			display: block;
+		}
+
+		.question b span {
+			display: none;
+		    background: #eee;
+		    border: 1px solid #ccc;
+		    padding: 10px;
+		    border-radius: 8px;
+		    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		    position: absolute;
+            top: 40px;
+    		right: -115px;
+		    width: 260px;
+		    font-size: 14px;
+		}
+
+		.question b span:before {
+		    position: absolute;
+		    display: inline-block;
+		    border-left: 13px solid transparent;
+		    border-bottom: 13px solid #eee;
+		    border-right: 13px solid transparent;
+		    border-bottom-color: rgba(0, 0, 0, 0.2);
+		    left: 120px;
+		    top: -14px;
+		    content: '';
+		}
+
+		.question b span:after {
+	        position: absolute;
+		    display: inline-block;
+		    border-left: 12px solid transparent;
+		    border-bottom: 12px solid #eee;
+		    border-right: 12px solid transparent;
+		    left: 120px;
+		    top: -12px;
+		    content: '';
+		}
+
+		.phone-web {
+			display: none;
+			text-align: center;
+		}
+
+		.phone-main {
+			position: absolute;
+			bottom: 16.577%;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.log-box {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 10%;
+			height: 11.44%;
+		}
+
+		.phone-logo {
+			height: 100%;
+			display: inline-block;
+		}
+
+		.phone-title {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 30%;
+			padding: 0 5%;
+		}
+
+		.phone-title h2 {
+			color: #fff;
+			font-size: 0.8rem;
+			font-weight: bold;
+		}
+
+		.phone-title span {
+			color: #fff;
+			font-size: 0.7rem;
+			margin-top: 16px;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.phone-box {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 45%;
+			height: 61%;
+		}
+
+		.ic_phone {
+			display: inline-block;
+			height: 80%;
+			width: 80%;
+			background: url(images/ic_pic.png) no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+
+		.download_area {
+			width: 100%;
+			height: 4.65rem;
+			background-color: #1EB5D6;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+
+		.download_btn {
+			width: 13rem;
+			height: 2.1rem;
+			margin: 0.95rem auto 0;
+			border: 1px solid #fff;
+			border-radius: 3px;
+			font-size: 0.85rem;
+			color: #fff;
+		}
+
+		.download_btn i {
+			display: inline-block;
+			width: 0.7rem;
+			height: 0.85rem;
+			position: absolute;
+			top: 0.05rem;
+			left: -1.3rem;
+			background: url("images/ic_file_download.png");
+			background-size: cover;
+		}
+
+		.download_btn .content {
+			display: inline-block;
+			margin-top: 0.5rem;
+			position: relative;
+			font-weight: 400;
+			margin-left: 1.2rem;
+			letter-spacing: 0.03rem;
+		}
+
+		.phone_copyright {
+			margin-top: 0.5rem;
+			font-size: 0.5rem;
+			color: #fff;
+			opacity: 0.6;
+		}
+
+
+    </style>
+
+	<script>
+		var tid = "";
+		var fontSize = 20;
+		var pageWidth = 375;
+		var maxPageWidth = 640;
+		var elm = document.documentElement;
+		var clientWidth = elm.clientWidth
+		if (clientWidth >= maxPageWidth) {
+			clientWidth = maxPageWidth;
+		}
+		var fonsSizeSeting = fontSize * (clientWidth / pageWidth) + 'px';
+		elm.style.fontSize = fonsSizeSeting;
+		function refreshRem() {
+			var elmInner = document.documentElement;
+			var widthInner = elmInner.clientWidth;
+			if (widthInner >= maxPageWidth) {
+				widthInner = maxPageWidth;
+			}
+			elmInner.style.fontSize = fontSize * (widthInner / pageWidth) + 'px';
+		}
+		window.addEventListener('resize', function () {
+			clearTimeout(tid);
+			tid = setTimeout(refreshRem, 300);
+		}, false);
+	</script>
+</head>
+<body>
+	<!--pc页面内容-->
+	<div class="pc-web">
+		<header>
+			<div class="content">
+				<div class="logo">BladeVPN</div>
+				<div class="tab-List">
+					<a href="/" class="tab active">HOME</a>
+					<a href="terms.html" class="tab">TERMS</a>
+					<a href="policy.html" class="tab">POLICY</a>
+					<a href="about.html" class="tab">ABOUT US</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="content">
+				<div class="title">
+					<h2>The best VPN for your phone and computer</h2>
+					<span>Free, fast, stable, secure, easy-to-use</span>
+				</div>
+				<div class="btn-download">
+					<a href="https://play.google.com/store/apps/details?id=com.zuscloud.bladevpn" class="btn-style btn-googlePlay"></a>
+					<a href="https://itunes.apple.com/us/app/blade-vpn/id1213835618?ls=1&mt=8" class="btn-style btn-appStore"></a>
+					<a href="https://itunes.apple.com/us/app/blade-vpn/id1213836166?ls=1&mt=12" class="btn-style btn-forMac"></a>
+					<div class="download-apk">
+						<a href="http://dl.bladevpn.com/dl/bladevpn1.0.1.apk">
+							<i></i>
+							<span>Download APK</span>
+						</a>
+						<div class="question">
+							<b><span>APK are short for Android Application Package, if you cannot access Google Play Store, you can download the APK file to install BladeVPN. </span></b>
+							
+						</div>
+					</div>
+					
+				</div>
+				<div class="ic_pic"></div>
+				
+			</div>
+		</div>
+
+		<div class="copyright">© 2017 BladeVPN</div>
+
+		<img src="images/ic_googleplay_hover.png" class="ic_hover googleplay-hover" />
+		<img src="images/ic_appstore_hover.png" class="ic_hover appstore-hover" />
+		<img src="images/ic_mac_hover.png" class="ic_hover mac-hover" />
+
+	</div>
+
+	<!--手机页面内容-->
+	<div class="phone-web">
+		<div class="phone-main">
+			<div class="log-box">
+				<img src="images/logo_blue_30.png" class="phone-logo">
+			</div>
+
+			<div class="phone-title">
+				<h2>The best VPN for your phone and computer</h2>
+				<span>Free, fast, stable, secure, easy-to-use</span>
+			</div>
+
+			<div class="phone-box">
+				<div class="ic_phone"></div>
+			</div>
+
+			<div class="download_area">
+				<div class="download_btn">
+					<span class="content"><i></i>Download</span>
+				</div>
+				<p class="phone_copyright">© 2017 BladeVPN</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		var ua = navigator.userAgent;
+		if (ua.indexOf("Android") != -1 || ua.match(/iPhone/i) || ua.match(/iPod/i) || ua.match(/iPad/i)) { // || ua.match(/iPad/i)
+			document.querySelector(".phone-web").style.display = "block";
+			document.body.className = "phone-body";
+		} else {
+			document.querySelector(".pc-web").style.display = "block";
+			document.body.className = "pc-body";
+		}
+
+		document.querySelector(".download_btn").onclick = function() {
+			if (navigator.userAgent.match(/iPhone/i)
+					|| navigator.userAgent.match(/iPad/i)
+					|| navigator.userAgent.match(/iPod/i)) {
+				window.location = "https://itunes.apple.com/us/app/blade-vpn/id1213835618?ls=1&mt=8";
+			} else if(ua.match(/Android/i)) {
+				window.location = "https://play.google.com/store/apps/details?id=com.zuscloud.bladevpn";
+				var timeOut = setTimeout(function(){
+					window.location = "http://dl.bladevpn.com/dl/bladevpn1.0.1.apk";
+				}, 3500);
+				timeOut();
+			}
+		}
+
+
+	</script>
+    
+</body>
+</html>
